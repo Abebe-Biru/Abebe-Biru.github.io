@@ -3,58 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Webpage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>Abebe Biru | Portfolio</title>
+    <!-- Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- SweetAlert2 CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>My Personal Webpage</h1>
-        </header>
-        <section class="about">
-            <h2>About Me</h2>
-            <p>Welcome to my personal webpage! I am [Your Name], a professional with a passion for [Your Profession/Interest]. With experience in [Your Experience], I strive to create impactful and meaningful work.</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Abebe Biru</a>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <section id="about">
+            <h1>About Me</h1>
+            <p>Hello! I'm Abebe, a Software Engineer...</p>
         </section>
-        <section class="contact">
-            <h2>Contact Information</h2>
-            <p>Email: your.email@example.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <div class="social-links">
-                <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
-            </div>
-        </section>
-        <section class="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-item" onclick="showProjectDetails('Project 1')">
-                    <h3>Project 1</h3>
-                    <p>Description of project 1.</p>
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://www.example.com/project1" target="_blank">
+                            <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Project 1">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">HerFil General Trading PLC Website</h5>
+                            <p class="card-text">Description of HerFil General Trading PLC Website...</p>
+                            <button class="btn btn-primary" onclick="showProjectDetails('HerFil General Trading PLC Website')">Details</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-item" onclick="showProjectDetails('Project 2')">
-                    <h3>Project 2</h3>
-                    <p>Description of project 2.</p>
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://www.example.com/project2" target="_blank">
+                            <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Project 2">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">SecuShare</h5>
+                            <p class="card-text">Description of SecuShare...</p>
+                            <button class="btn btn-primary" onclick="showProjectDetails('SecuShare')">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://www.example.com/project2" target="_blank">
+                            <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Project 2">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Advanced Scientific Calculator</h5>
+                            <p class="card-text">Description of Advanced Scientific Calculator...</p>
+                            <button class="btn btn-primary" onclick="showProjectDetails('Advanced Scientific Calculator')">Details</button>
+                        </div>
+                    </div>
                 </div>
                 <!-- Add more projects as needed -->
             </div>
         </section>
-        <section class="contact">
-            <h2>Contact Me</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
+        <section id="skills">
+            <h1>Skills</h1>
+            <p>PHP, Python, JavaScript, HTML, CSS, and more...</p>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <form id="contactForm" action="mailto:abesoboka@gmail.com" method="post" enctype="text/plain">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="./js/scripts.js"></script>
+
+    <!-- jQuery and Bootstrap JS from CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- SweetAlert2 JS from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
 </body>
 </html>
