@@ -1,42 +1,131 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header, .about, .contact, .projects {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(to right, #f39c12, #e74c3c);
+    color: #fff;
+    box-shadow: none;
 }
 
 h1 {
-    margin-top: 20px;
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+h2 {
+    font-size: 2em;
+    color: #f39c12;
     margin-bottom: 20px;
-    font-weight: bold;
 }
 
-.card {
-    border: 1px solid #ddd;
-    transition: transform 0.3s;
+.social-links a {
+    color: #f39c12;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.card:hover {
-    transform: scale(1.05);
+.social-links a:hover {
+    color: #e74c3c;
 }
 
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.form-group label {
-    font-weight: bold;
+.project-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-control {
-    border-radius: 0.25rem;
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input, textarea, button {
     padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
 }
 
-.btn-primary {
-    background-color: #007bff;
+input, textarea {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #f39c12;
+}
+
+button {
+    background: #f39c12;
+    color: #fff;
     border: none;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+button:hover {
+    background: #e74c3c;
+}
+
+/* Animations */
+header, .about, .contact, .projects {
+    animation: fadeInUp 1s ease both;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
