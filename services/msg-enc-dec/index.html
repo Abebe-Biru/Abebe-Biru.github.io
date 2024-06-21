@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt and Decrypt Message</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Encrypt and Decrypt Message</h1>
+        <div>
+            <label for="key">Secret Key:</label>
+            <input type="password" id="key">
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" cols="50"></textarea>
+        </div>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="operation" value="encrypt" checked> Encrypt
+            </label>
+            <label>
+                <input type="radio" name="operation" value="decrypt"> Decrypt
+            </label>
+        </div>
+        <div>
+            <button onclick="performOperation()">Submit</button>
+        </div>
+        <div id="result-container">
+            <h2>Result:</h2>
+            <pre id="result"></pre>
+            <button id="copyButton" class="copy-button" style="display:none;" onclick="copyToClipboard()">Copy to Clipboard</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.error('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
