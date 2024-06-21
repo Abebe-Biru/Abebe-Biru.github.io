@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCQ Quiz</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+      <!-- Bootstrap CSS from CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="../../css/styles.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="../../">My Portfolio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../blogs/">Blogs</a>
+          </li>
+          <!-- Uncomment this section if you want to add a contact link -->
+          <!-- <li class="nav-item">
+                        <a class="nav-link" href="../../#contact">Contact</a>
+                    </li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>MCQ Quiz</h1>
+      <form id="quizForm">
+        <div class="question">
+          <p>1. Which one is not an architectural style?</p>
+          <label
+            ><input type="radio" name="q1" value="a" />a. Client server</label
+          ><br />
+          <label><input type="radio" name="q1" value="b" />b. UML</label><br />
+          <label><input type="radio" name="q1" value="c" />c. MVC</label><br />
+          <label><input type="radio" name="q1" value="d" />d. OSI layer</label>
+        </div>
+        <!-- Repeat for each question -->
+        <div class="question">
+          <p>
+            2. Which of the following indicates the assurance that a product,
+            service, or result meets the needs of the customer other identified
+            stakeholders?
+          </p>
+          <label
+            ><input type="radio" name="q2" value="a" />a. Verification</label
+          ><br />
+          <label><input type="radio" name="q2" value="b" />b. Validation</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="c" />c. SWOT Analysis</label
+          ><br />
+          <label><input type="radio" name="q2" value="d" />d. Variance</label>
+        </div>
+        <div class="question">
+          <p>
+            3. Security estimate is an essential component of …………. Process.
+          </p>
+          <label
+            ><input type="radio" name="q3" value="a" />a. Risk management</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="b" />b. Software
+            development</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="c" />c. Software design</label
+          ><br />
+          <label><input type="radio" name="q3" value="d" />d. SRS design</label>
+        </div>
+
+        <!-- Add all questions here -->
+        <button type="button" onclick="checkAnswers()">Check Answers</button>
+      </form>
+      <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
