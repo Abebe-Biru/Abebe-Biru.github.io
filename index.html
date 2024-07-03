@@ -40,82 +40,95 @@
         </div>
     </nav>
     
- <!-- Main Content -->
- <div class="container mt-5">
-    <section id="about">
-        <h1>About Me</h1>
-        <p>Hello! I'm Abebe, a Software Engineer...</p>
-    </section>
-    <section id="projects">
-        <h1>Projects</h1>
-        <div class="row">
-            <!-- Project 1 -->
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <a href="https://www.example.com/project1" target="_blank">
-                        <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Project 1">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">HerFil General Trading PLC Website</h5>
-                        <p class="card-text">Description of HerFil General Trading PLC Website...</p>
-                        <button class="btn btn-primary" onclick="showProjectDetails('HerFil General Trading PLC Website')">Details</button>
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <section id="about">
+            <h1>About Me</h1>
+            <p>Hello! I'm Abebe, a Software Engineer with experience in developing web applications using modern technologies such as React, Tailwind CSS, Laravel, and MySQL. I have a strong background in software development and a passion for creating secure and efficient applications.</p>
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://www.example.com/project1" target="_blank">
+                            <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="HerFil General Trading PLC Website">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">HerFil General Trading PLC Website</h5>
+                            <p class="card-text">Developed the company’s website using React, Tailwind CSS, Laravel, and MySQL. Implemented an image magnifier feature that enhanced the user experience, earning an 'A' grade and a promise of a certificate of appreciation from project mentors.</p>
+                            <button class="btn btn-primary" onclick="showProjectDetails('HerFil General Trading PLC Website')">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://www.example.com/project2" target="_blank">
+                            <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="SecuShare">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">SecuShare</h5>
+                            <p class="card-text">Built a secure platform for sharing project ideas using the MERN stack, Google Captcha, login limiting, CA (Certificate Authority) practices, and encryption. Included a comprehensive database backup system to ensure data integrity and facilitate recovery.</p>
+                            <button class="btn btn-primary" onclick="showProjectDetails('SecuShare')">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://www.example.com/project3" target="_blank">
+                            <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="LangT">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">LangT</h5>
+                            <p class="card-text">Created a web application using Google Translate API and PHP to translate user inputs among multiple languages, including Amharic, Afaan Oromoo, and Tigrigna. Enhanced accessibility by supporting multiple regional languages.</p>
+                            <button class="btn btn-primary" onclick="showProjectDetails('LangT')">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://www.example.com/project4" target="_blank">
+                            <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="AfaanCheck">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">AfaanCheck</h5>
+                            <p class="card-text">Developed a spell-checking tool for Afaan Oromoo using PHP and a binary-search algorithm for fast and efficient word validation. Integrated a comprehensive dictionary and provided a user-friendly interface.</p>
+                            <button class="btn btn-primary" onclick="showProjectDetails('AfaanCheck')">Details</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Project 2 -->
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <a href="https://www.example.com/project2" target="_blank">
-                        <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Project 2">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">SecuShare</h5>
-                        <p class="card-text">Description of SecuShare...</p>
-                        <button class="btn btn-primary" onclick="showProjectDetails('SecuShare')">Details</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <a href="https://www.example.com/project2" target="_blank">
-                        <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Project 2">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Advanced Scientific Calculator</h5>
-                        <p class="card-text">Description of Advanced Scientific Calculator...</p>
-                        <button class="btn btn-primary" onclick="showProjectDetails('Advanced Scientific Calculator')">Details</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more projects as needed -->
-        </div>
-    </section>
-    <section id="skills">
-        <h1>Skills</h1>
-        <p>PHP, Python, JavaScript, HTML, CSS, and more...</p>
-    </section>
-    <!-- <section id="contact">
-        <h1>Contact</h1>
-        <form id="contactForm" action="mailto:abesoboka@gmail.com" method="post" enctype="text/plain">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </section> -->
-</div>
+        </section>
+        <section id="skills">
+            <h1>Skills</h1>
+            <ul>
+                <li><strong>Programming Languages:</strong> JavaScript, PHP, Python, Java, C++</li>
+                <li><strong>Web Technologies:</strong> HTML, CSS, Node.js, React, Express.js, Laravel</li>
+                <li><strong>Databases:</strong> MySQL, MongoDB</li>
+                <li><strong>Tools:</strong> Git, Docker</li>
+                <li><strong>Methodologies:</strong> Agile, Scrum</li>
+            </ul>
+        </section>
+        <section id="certifications">
+            <h1>Certifications</h1>
+            <ul>
+                <li>PHP Certification — Sololearn</li>
+                <li>Google Developers Badges — Various courses and achievements</li>
+            </ul>
+        </section>
+        <section id="languages">
+            <h1>Languages</h1>
+            <ul>
+                <li><strong>Afaan Oromoo:</strong> Native</li>
+                <li><strong>Amharic:</strong> Fluent</li>
+                <li><strong>English:</strong> Fluent</li>
+            </ul>
+        </section>
+    </div>
 
     <!-- jQuery and Bootstrap JS from CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
